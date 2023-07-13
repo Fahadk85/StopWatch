@@ -14,7 +14,13 @@ let mins = 0;
 let secs = 0;
 
 
-startBtn.addEventListener();
+startBtn.addEventListener("click", () => {
+    if(paused){
+        paused = false;
+        startTime = Date.now() - elapsedTime;
+        intervalId = setInterval(updateTime, 1000);
+    }
+});
 
 pauseBtn.addEventListener();
 
@@ -22,5 +28,5 @@ resetBtn.addEventListener();
 
 
 function updateTime(){
-    
+
 }
