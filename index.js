@@ -22,7 +22,13 @@ startBtn.addEventListener("click", () => {
     }
 });
 
-pauseBtn.addEventListener();
+pauseBtn.addEventListener("click", () => {
+    if(!paused){
+        paused = true;
+        elapsedTime = Date.now() - startTime;
+        clearInterval(intervalId);
+    }
+});
 
 resetBtn.addEventListener();
 
